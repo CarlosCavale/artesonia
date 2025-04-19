@@ -29,14 +29,16 @@ app.use((err, req, res, next) => {
   res.status(500).send('¡Algo salió mal!');
 });
 
-// Verifica si estamos en el entorno de Hostinger
-const isHostinger = process.env.NODE_ENV === 'production' && process.env.HOSTINGER_DOMAIN;
+// Si no se importa como módulo, iniciar el servidor
+if (!module.parent) {
+  const server = app.listen(PORT, () => {
+    const isHostinger = process.env.NODE_ENV === 'production' && process.env.HOSTINGER_DOMAIN;
+    if (isHostinger) {
+      console.log(`Servidor en producción (Hostinger) corriendo en http://${process.env.HOSTINGER_DOMAIN}:${PORT}`);
+    } else {
+      console.log(`Servidor de desarrollo corriendo en http://localhost:${PORT}`);
+    }
+  });
+}
 
-// Log de inicio personalizado según el entorno
-app.listen(PORT, () => {
-  if (isHostinger) {
-    console.log(`Servidor en producción (Hostinger) corriendo en http://${process.env.HOSTINGER_DOMAIN}:${PORT}`);
-  } else {
-    console.log(`Servidor de desarrollo corriendo en http://localhost:${PORT}`);
-  }
-}); 
+module.exports = app; 
