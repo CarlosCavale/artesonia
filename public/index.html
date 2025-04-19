@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtesOnía - Locutores Profesionales</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@400;600&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="ArtesOnía" class="logo-img">
+            </a>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#voces">Voces</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <p class="hero-subtitle">Artesonía, el arte al sonar</p>
+            <h1>Voces<br>Música<br>Sonido</h1>
+            <p class="hero-description">Somos un equipo de profesionales y amantes del sonido, que nos dedicamos a dar vida a tus proyectos.</p>
+            <div class="cta-buttons">
+                <a href="#voces" class="btn-primary">Escuchar Demos</a>
+                <a href="#contacto" class="btn-secondary">Contáctanos</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="service-section">
+        <div class="container">
+            <h2 class="section-header">Nuestros Servicios</h2>
+            <div class="service-grid section-content">
+                <div class="service-card card-animation">
+                    <h3>Locución Comercial</h3>
+                    <p>Damos vida a tus campañas publicitarias con voces profesionales que capturan la atención de tu audiencia.</p>
+                    <ul class="service-features">
+                        <li>Anuncios de radio y TV</li>
+                        <li>Publicidad en redes sociales</li>
+                        <li>Mensajes promocionales</li>
+                        <li>Jingles y eslóganes</li>
+                    </ul>
+                </div>
+
+                <div class="service-card card-animation">
+                    <h3>Narraciones</h3>
+                    <p>Contamos tus historias con la emoción y profesionalismo que merecen.</p>
+                    <ul class="service-features">
+                        <li>Documentales</li>
+                        <li>Audiovisuales corporativos</li>
+                        <li>Podcasts</li>
+                        <li>Contenido narrativo</li>
+                    </ul>
+                </div>
+
+                <div class="service-card card-animation">
+                    <h3>E-learning</h3>
+                    <p>Transformamos tu contenido educativo con voces claras y profesionales.</p>
+                    <ul class="service-features">
+                        <li>Cursos en línea</li>
+                        <li>Material educativo</li>
+                        <li>Tutoriales</li>
+                        <li>Presentaciones corporativas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="voces" class="voice-section">
+        <div class="container">
+            <h2 class="section-header">Nuestras Voces</h2>
+            <div class="voice-categories section-content">
+                <button class="category-btn active" data-category="all">Todas</button>
+                <button class="category-btn" data-category="comercial">Comercial</button>
+                <button class="category-btn" data-category="narracion">Narración</button>
+                <button class="category-btn" data-category="elearning">E-learning</button>
+            </div>
+
+            <div class="voice-grid">
+                <div class="voice-card card-animation" data-category="comercial">
+                    <div class="voice-info">
+                        <h3>Voz Comercial 1</h3>
+                        <p>Voz masculina - Comercial</p>
+                    </div>
+                    <audio controls>
+                        <source src="audio/demo1.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+                </div>
+
+                <div class="voice-card card-animation" data-category="narracion">
+                    <div class="voice-info">
+                        <h3>Voz Narración 1</h3>
+                        <p>Voz femenina - Narración</p>
+                    </div>
+                    <audio controls>
+                        <source src="audio/demo2.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+                </div>
+
+                <div class="voice-card card-animation" data-category="elearning">
+                    <div class="voice-info">
+                        <h3>Voz E-learning 1</h3>
+                        <p>Voz neutra - E-learning</p>
+                    </div>
+                    <audio controls>
+                        <source src="audio/demo3.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info section-header">
+                    <h2>¿Necesitas una voz para tu proyecto?</h2>
+                    <p>Completa el formulario y nos pondremos en contacto contigo a la brevedad.</p>
+                    <div class="contact-details">
+                        <p><strong>Email:</strong> contacto@artesonia.cl</p>
+                        <p><strong>Teléfono:</strong> +56 9 XXXX XXXX</p>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name" class="required">Nombre</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message">Por favor, ingresa tu nombre</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="required">Email</label>
+                        <input type="email" id="email" name="email" required 
+                               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                        <span class="error-message">Por favor, ingresa un email válido</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Servicio de Interés</label>
+                        <select id="service" name="service">
+                            <option value="">Selecciona un servicio</option>
+                            <option value="comercial">Comercial</option>
+                            <option value="corporativo">Corporativo</option>
+                            <option value="narracion">Narración</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 ArtesOnía. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voces - Artesonia</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="/" class="logo">ARTESONIA</a>
+            <div class="nav-links">
+                <a href="/">Inicio</a>
+                <a href="/servicios">Servicios</a>
+                <a href="/voces">Voces</a>
+                <a href="/contacto">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Nuestras Voces</h1>
+        
+        <div class="voice-categories">
+            <button class="category-btn active" data-category="all">Todas</button>
+            <button class="category-btn" data-category="comercial">Comercial</button>
+            <button class="category-btn" data-category="narracion">Narración</button>
+            <button class="category-btn" data-category="elearning">E-learning</button>
+        </div>
+
+        <div class="voice-grid">
+            <!-- Ejemplo de demo de voz -->
+            <div class="voice-card" data-category="comercial">
+                <div class="voice-info">
+                    <h3>Voz Comercial 1</h3>
+                    <p>Voz masculina - Comercial</p>
+                </div>
+                <audio controls>
+                    <source src="audio/demo1.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+
+            <div class="voice-card" data-category="narracion">
+                <div class="voice-info">
+                    <h3>Voz Narración 1</h3>
+                    <p>Voz femenina - Narración</p>
+                </div>
+                <audio controls>
+                    <source src="audio/demo2.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+
+            <div class="voice-card" data-category="elearning">
+                <div class="voice-info">
+                    <h3>Voz E-learning 1</h3>
+                    <p>Voz neutra - E-learning</p>
+                </div>
+                <audio controls>
+                    <source src="audio/demo3.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Artesonia. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/voices.js"></script>
+</body>
+</html> 
